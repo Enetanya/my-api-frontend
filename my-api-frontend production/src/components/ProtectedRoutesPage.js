@@ -22,7 +22,7 @@ const ProtectedRoutesPage = () => {
         password2: e.target.elements.password2.value
       };
      }
-     const response = await fetch(`https://charming-figolla-3e81b7.netlify.app/main/${action}`, {
+     const response = await fetch(`https://counties-unitauthorities-england-api.netlify.app/main/${action}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const handleDelete = async (e) => {
        password1: e.target.elements.password1.value,
        password2: e.target.elements.password2.value
       };
-      const response = await fetch(`https://charming-figolla-3e81b7.netlify.app/main/delete`, {
+      const response = await fetch(`https://counties-unitauthorities-england-api.netlify.app/main/delete`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
