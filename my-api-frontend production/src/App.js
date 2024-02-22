@@ -8,7 +8,7 @@ import LoginPage from './components/LoginPage';
 import ProtectedRoutesPage from './components/ProtectedRoutesPage';
 import SignupPage from './components/SignupPage';
 import NewLoginDetailsPage from './components/NewLoginDetailsPage';
-import ReceiverComponent from './components/ReceiverComponent';
+
 
 
 
@@ -22,7 +22,6 @@ const App = () => {
         <Route path="/forgot-password" element={<ForgotPasswordPage/>} /> 
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/protected-routes" element={<ProtectedRoutesPage/>} />
-        <Route path="/receiver-component" element={<ReceiverComponent/>} />
         <Route path="/new-login-details" element={<NewLoginDetailsPage/>} />
       </Routes>
     </BrowserRouter>
