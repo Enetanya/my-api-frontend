@@ -16,7 +16,7 @@ const LoginPage = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://charming-figolla-3e81b7.netlify.app/auth/login', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
