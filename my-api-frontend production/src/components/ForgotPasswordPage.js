@@ -12,7 +12,7 @@ const ForgotPasswordPage = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://charming-figolla-3e81b7.netlify.app/forgot/submit-email', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/submit-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
