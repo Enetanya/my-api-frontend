@@ -11,7 +11,7 @@ const DocumentationPage = () => {
 
   const generateApiKey = async () => {
     try {
-      const response = await fetch('https://charming-figolla-3e81b7.netlify.app/main/generateApiKey', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/main/generateApiKey', {
         method: 'POST',
       });
 
@@ -90,7 +90,7 @@ const DocumentationPage = () => {
       <br />
       <strong>You have two options on how to include API key in your requests:</strong>
       <ul>
-        <li>Include the API key as a query parameter in your URL: https://charming-figolla-3e81b7.netlify.app/main/place?apiKey=YOUR_API_KEY&use_header=false</li>
+        <li>Include the API key as a query parameter in your URL:https://counties-unitauthorities-england-api.netlify.app/main/place?apiKey=YOUR_API_KEY&use_header=false</li>
         <li>Use the `Authorization` header in your request with the API key: `Authorization: YOUR_API_KEY`</li>
       </ul>
 
@@ -111,7 +111,7 @@ const DocumentationPage = () => {
             <li>use_header: false</li>
           </ul>
         </li>
-        <li>URL:https://charming-figolla-3e81b7.netlify.app/main/place?api_key=YOUR_API_KEY&use_header=false</li>
+        <li>URL:https://counties-unitauthorities-england-api.netlify.app/main/place?api_key=YOUR_API_KEY&use_header=false</li>
       </ul>
       <strong>Response Format:</strong>
       <ul>
@@ -139,8 +139,8 @@ const DocumentationPage = () => {
         </li>
         <li>URL:
           <ul>
-            <li>No space: https://charming-figolla-3e81b7.netlify.app/main/place/Name?api_key=YOUR_API_KEY&use_header=false</li>
-            <li>With space: https://charming-figolla-3e81b7.netlify.app/main/place/A%20B%20C?api_key=YOUR_API_KEY&use_header=false; Replace spaces in URL parameters with '%20' or use '+' in query parameters. Assuming Name = 'A B C'.</li>
+            <li>No space: https://counties-unitauthorities-england-api.netlify.app/main/place/Name?api_key=YOUR_API_KEY&use_header=false</li>
+            <li>With space: https://counties-unitauthorities-england-api.netlify.app/main/place/A%20B%20C?api_key=YOUR_API_KEY&use_header=false; Replace spaces in URL parameters with '%20' or use '+' in query parameters. Assuming Name = 'A B C'.</li>
           </ul>
         </li>
       </ul>
