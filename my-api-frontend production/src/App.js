@@ -8,7 +8,7 @@ import LoginPage from './components/LoginPage';
 import ProtectedRoutesPage from './components/ProtectedRoutesPage';
 import SignupPage from './components/SignupPage';
 import NewLoginDetailsPage from './components/NewLoginDetailsPage';
-import Autoredirect from './components/Autoredirect';
+import Autoredirect from './Autoredirect';
 
 
 
