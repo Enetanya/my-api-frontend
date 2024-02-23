@@ -23,7 +23,8 @@ const App = () => {
         <Route path="/forgot-password" element={<ForgotPasswordPage/>} /> 
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/protected-routes" element={<ProtectedRoutesPage/>} />
-        <Route path="/new-login-details" element={<NewLoginDetailsPage/>} />
+   <Route path="/new-login-details" element={<NewLoginDetailsPage/>} />
+        <Route path="/auto-redirect" element={<Autoredirect/>} />
       </Routes>
     </BrowserRouter>
   );
