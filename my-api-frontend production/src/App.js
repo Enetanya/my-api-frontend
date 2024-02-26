@@ -8,7 +8,7 @@ import LoginPage from './components/LoginPage';
 import ProtectedRoutesPage from './components/ProtectedRoutesPage';
 import SignupPage from './components/SignupPage';
 import NewLoginDetailsPage from './components/NewLoginDetailsPage';
-import AutoRedirect from './AutoRedirect';
+
 
 
 
@@ -24,8 +24,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/protected-routes" element={<ProtectedRoutesPage/>} />
    <Route path="/new-login-details" element={<NewLoginDetailsPage/>} />
-        <Route path="/auto-redirect" element={<AutoRedirect/>} />
-      </Routes>
+     </Routes>
     </BrowserRouter>
   );
 };
