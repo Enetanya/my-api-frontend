@@ -10,7 +10,7 @@ const ForgotPasswordPage = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+  
     try {
       const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/submit-email', {
         method: 'POST',
@@ -21,15 +21,20 @@ const ForgotPasswordPage = () => {
           email: email,
         }),
       });
-      
+     
       const data = await response.json();
-
+  
       if (data.message === 'success') {
         setMessage('Check your email to change login details. The link expires in 15 minutes.');
-
+  
         // Clear input after submitting
         setEmail('');
-
+  
+        // Navigate after 15 seconds
+        setTimeout(() => {
+          window.location.href = "/new-login-details";
+        }, 15000);
+  
       } else {
         setMessage('Failed to send email');
       }
@@ -38,7 +43,6 @@ const ForgotPasswordPage = () => {
       setMessage('Failed to send email');
     }
   };
-
   return (
     <div>
       <h3>Please enter your registered email address and submit.</h3>
