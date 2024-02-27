@@ -18,7 +18,7 @@ const NewLoginDetailsPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/update-login-details', {
+      const response = await fetch('https://charming-figolla-3e81b7.netlify.app/forgot/update-login-details', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json' 
@@ -70,9 +70,10 @@ const NewLoginDetailsPage = () => {
       <br />
       <br />
       <br />
-      <p>1. Email: Use the registered email for the system.</p>
-      <p>2. ID Rule: Create an ID at least 8 characters long, using only letters, uppercase/lowercase.</p>
-      <p>3. Password Rule: Generate a password at least 8 characters long, including one uppercase letter, one lowercase letter, one number, and one special character.</p>
+      <p>1. Please ensure you have comfirmed your email by clicking on the link sent to your email address, as you will be unable to complete the process if you have not. </p>
+      <p>2. Email: Use the registered email for the system.</p>
+      <p>3. ID Rule: Create an ID at least 8 characters long, using only letters, uppercase/lowercase.</p>
+      <p>4. Password Rule: Generate a password at least 8 characters long, including one uppercase letter, one lowercase letter, one number, and one special character.</p>
       <br />
       <br />
        {success && (
