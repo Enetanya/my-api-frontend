@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleChange = (event) => {
     setEmail(event.target.value);
@@ -10,7 +12,7 @@ const ForgotPasswordPage = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     try {
       const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/submit-email', {
         method: 'POST',
@@ -21,20 +23,20 @@ const ForgotPasswordPage = () => {
           email: email,
         }),
       });
-     
+
       const data = await response.json();
-  
+
       if (data.message === 'success') {
         setMessage('Check your email to change login details. The link expires in 15 minutes.');
-  
+
         // Clear input after submitting
         setEmail('');
-  
-        // Navigate after 15 seconds
+
+        // Navigate using useNavigate after 15 seconds
         setTimeout(() => {
-          window.location.href = "/new-login-details";
+          navigate("/new-login-details");
         }, 15000);
-  
+
       } else {
         setMessage('Failed to send email');
       }
