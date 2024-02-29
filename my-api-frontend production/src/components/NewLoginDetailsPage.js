@@ -19,7 +19,7 @@ const NewLoginDetailsPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://charming-figolla-3e81b7.netlify.app/forgot/update-login-details', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/update-login-details', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json' 
@@ -63,7 +63,7 @@ const NewLoginDetailsPage = () => {
           <input value={email} onChange={(e) => setEmail(e.target.value)} name="email" type="email" required placeholder="Enter same email address" />
           <input value={newId} onChange={(e) => setNewId(e.target.value)} name="newId" type="text" required placeholder="New User ID" />
           <input value={newPassword} onChange={(e) => setNewPassword(e.target.value)} name="newPassword" type="password"  required  placeholder="New Password" />
-          <input value={number} onChange={(e) => setNumber(e.target.value)} name="number" type="text"  required  placeholder="Reference Number" />
+          <input value={number} onChange={(e) => setNumber(e.target.value)} name="number" type="number"  required  placeholder="Reference Number" />
           <button type="submit">Submit</button>
         </form>
         <br />
