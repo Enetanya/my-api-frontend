@@ -27,7 +27,7 @@ const ForgotPasswordPage = () => {
       const data = await response.json();
 
       if (data.message === 'success') {
-        setMessage('Check your email to change login details. The link expires in 15 minutes.');
+        setMessage('Check your email address to copy your reference number.');
 
         // Clear input after submitting
         setEmail('');
