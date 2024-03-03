@@ -15,7 +15,7 @@ const SignupPage = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/auth/signup', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/auth/process.env.sp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
