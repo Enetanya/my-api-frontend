@@ -11,7 +11,7 @@ const DocumentationPage = () => {
 
   const generateApiKey = async () => {
     try {
-      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/main/generateApiKey', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/main/process.env.gy', {
         method: 'POST',
       });
 
