@@ -9,7 +9,7 @@ const ProtectedRoutesPage = () => {
   const handleSubmit = async (e, action) => {
     e.preventDefault();
     try { let requestBody;
-       if (action === 'create' || action === 'update') {
+       if (action === 'process.env.ct' || action === 'process.env.ut') {
         requestBody = { 
         Name: e.target.elements.Name.value,
         Districts: e.target.elements.Districts.value,
@@ -32,12 +32,12 @@ const ProtectedRoutesPage = () => {
     const data = await response.json();
 
     switch (action) {
-      case 'create':
+      case 'process.env.ct':
         setCreateMessage(data.message);
         setUpdateMessage('');
         setDeleteMessage('');
         break;
-      case 'update':
+      case 'process.env.ut':
         setUpdateMessage(data.message);
         setCreateMessage('');
         setDeleteMessage('');
@@ -63,7 +63,7 @@ const handleDelete = async (e) => {
        password1: e.target.elements.password1.value,
        password2: e.target.elements.password2.value
       };
-      const response = await fetch(`https://counties-unitauthorities-england-api.netlify.app/main/delete`, {
+      const response = await fetch(`https://counties-unitauthorities-england-api.netlify.app/main/process.env.dt`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ return (
     <br />
 
     {/* Add Form */}
-    <form onSubmit={(e) => handleSubmit(e, 'create')}>
+    <form onSubmit={(e) => handleSubmit(e, 'process.env.ct')}>
       <h2>Add County and/or Unitary Authority</h2>
       <input type='text' name='Name' placeholder='Enter Name' required />
         <input type='text' name='Districts' placeholder='Enter Districts (comma-separated)' />
@@ -109,7 +109,7 @@ return (
     <br />
     
     {/* Update Form */}
-    <form onSubmit={(e) => handleSubmit(e, 'update')}>
+    <form onSubmit={(e) => handleSubmit(e, 'process.env.ut')}>
       <h2>Update County and/or Unitary Authority</h2>
       <input type='text' name='Name' placeholder='Enter Name to Update' required />
         <input type='text' name='Districts' placeholder='Enter Updated Districts (comma-separated)' />
