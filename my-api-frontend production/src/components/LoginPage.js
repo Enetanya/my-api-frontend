@@ -34,7 +34,7 @@ const LoginPage = () => {
         setFormData({ id: '', password: '' });
         setMessage('');
         // Direct to DocumentationPage
-        navigate('/documentation');
+        navigate('process.env.dn');
       } else {
         setMessage('Invalid credentials!');
       }
