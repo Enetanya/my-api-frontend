@@ -19,7 +19,7 @@ const NewLoginDetailsPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/update-login-details', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/process.env.ud', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json' 
