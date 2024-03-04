@@ -14,7 +14,7 @@ const ForgotPasswordPage = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/process.env.se', {
+      const response = await fetch('https://counties-unitauthorities-england-api.netlify.app/forgot/process.env.sem', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
